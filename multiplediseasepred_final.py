@@ -12,15 +12,15 @@ from streamlit_option_menu import option_menu
 
 #loading the models
 
-diabetes_model = pickle.load(open('C:/Users/amitr/Downloads/Amits Workspace/ML/saved models/diabetes_model.sav', 'rb'))
+diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
 
-heart_disease_model = pickle.load(open('C:/Users/amitr/Downloads/Amits Workspace/ML/saved models/heart_disease_model.sav','rb'))
+heart_disease_model = pickle.load(open('heart_disease_model.sav','rb'))
 
-parkinsons_model = pickle.load(open('C:/Users/amitr/Downloads/Amits Workspace/ML/saved models/parkinsons_model.sav', 'rb'))
+parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
-breast_cancer = pickle.load(open('C:/Users/amitr/Downloads/Amits Workspace/ML/saved models/breast_cancer_model.sav', 'rb'))
+breast_cancer = pickle.load(open('breast_cancer_model.sav', 'rb'))
 
-dlung_cancer = pickle.load(open('C:/Users/amitr/Downloads/Amits Workspace/ML/saved models/lung_cancer_model.sav', 'rb'))
+dlung_cancer = pickle.load(open('lung_cancer_model.sav', 'rb'))
 
 
 #sidebar for navigation
