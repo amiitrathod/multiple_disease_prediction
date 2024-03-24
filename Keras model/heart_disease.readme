@@ -1,0 +1,24 @@
+//  This model has 1 input(s):
+//  1. "dense_input" (ndarray with shape 1, 13)
+//  Outputs are returned as :
+//  1. "dense_2" (ndarray with shape 1, 2)
+//  
+//  
+//  Sample code for integration:
+#include "heart_disease_deepC/heart_disease.h"
+  ...
+  ...
+  float dnnc_dense_input_data[13]; // model input "dense_input", developer to assign values.
+  unsigned short dnnc_dense_input_shape[] = {1, 13}; // model input shape.
+  deepSea::ndarray<float> dnnc_dense_input(dnnc_dense_input_data, dnnc_dense_input_shape, 2);
+
+  //  Call to deepSea_model below returns results as vector of ndarray.
+  //  Vector elemets are:
+  //  1. node "dense_2" (ndarray with shape 1, 2)
+  std::vector<deepSea::ndarray<float>> deepSea_result = deepSea_model(dnnc_dense_input);
+  ...
+  ...
+  // Remember to release the ndarray memory in deepSea_result, when done processing the results.
+  for (unsigned int i=0; i<deepSea_result.size(); i++)
+    free(deepSea_result[i]);
+
